@@ -1,0 +1,22 @@
+.title-container {
+    cursor: pointer;
+    width: 100%;
+    padding-top: 200px;
+
+    .title {
+        margin: 0 auto;
+        width: 30%;
+        padding: 10px 20px;
+        color: black;
+        text-align: center;
+        font-weight: bold;
+        font-size: 30px;
+        background: linear-gradient(red 0%, orange 25%, yellow 50%, green 75%, blue 100%);
+        border: 1px solid gray;
+        border-radius: 6px;
+    }
+}
+
+a {
+    text-decoration: none;
+}
