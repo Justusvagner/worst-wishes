@@ -1,0 +1,96 @@
+$basic-blue: #9198e5;
+$basic-red: #ff4444;
+$basic-yellow: #e5e599;
+
+.header-container {
+  height: 300px;
+  box-shadow: black 0 10px 20px;
+
+  .header {
+    .logo-container {
+      background-color: black;
+      text-align: center;
+      position: relative;
+
+      .header-logo {
+        height: 180px;
+      }
+
+      .social-container {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+
+        .social-link img{
+          height: 40px;
+          width: 40px;
+
+          &:hover {
+            /* Start the shake animation and make the animation last for 0.5 seconds */
+            animation: shake 0.5s;
+
+            /* When the animation is finished, start again */
+            animation-iteration-count: infinite;
+          }
+
+          @keyframes shake {
+            0% { transform: rotate(0deg); }
+            80% { transform: rotate(0deg); }
+            85% { transform: rotate(5deg); }
+            95% { transform: rotate(-5deg); }
+            100% { transform: rotate(0deg); }
+          }
+        }
+      }
+    }
+
+    .navbar-container {
+      display: flex;
+      justify-content: space-between;
+      background: linear-gradient(#000000, $basic-red);
+      padding: 60px 5px 5px 0;
+
+      .navbar-text {
+        span {
+          font-size: 30px;
+          font-weight: bold;
+          color: $basic-yellow;
+        }
+        padding-left: 30px;
+        padding-top: 15px;
+      }
+
+      .navbar {
+        height: 60px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        flex-wrap: nowrap;
+        row-gap: 10px;
+        column-gap: 10px;
+
+        .navbar-item {
+          min-width: 100px;
+          padding: 17px 30px 13px 30px;
+          background-color: lightgray;
+          border-radius: 10px;
+          border: 2px solid transparent;
+          color: #333333;
+          font-size: 20px;
+          text-align: center;
+          cursor: pointer;
+          transition: 1s;
+
+          &:hover {
+            background-color: gray;
+            border: 2px solid $basic-yellow;
+          }
+          &:active {
+            background: linear-gradient(#555555, #ffffff);
+            border: 2px solid $basic-yellow;
+          }
+        }
+      }
+    }
+  }
+}

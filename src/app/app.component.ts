@@ -1,22 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+let apiLoaded = false;
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-
+export class AppComponent implements OnInit {
   title = 'Worst Wishes';
-  link = 'https://www.instagram.com/worst_wishes_official/';
 
-  playAudio(){
-    let audio = new Audio();
-    audio.src = "../../../assets/audio/alarm.wav";
-    audio.load();
-    audio.play();
-    setTimeout(() => {
-      window.location.href = this.link;
-    }, 1500);
+
+  ngOnInit(): void {
+    if (!apiLoaded) {
+      const tag = document.createElement('script');
+      tag.src = 'https://www.youtube.com/iframe_api';
+      document.body.appendChild(tag);
+      apiLoaded = true;
+    }
   }
 }
