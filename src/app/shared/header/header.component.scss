@@ -3,14 +3,24 @@ $basic-red: #ff4444;
 $basic-yellow: #e5e599;
 
 .header-container {
-  height: 300px;
   box-shadow: black 0 10px 20px;
+  margin-bottom: 30px;
 
   .header {
     .logo-container {
       background-color: black;
       text-align: center;
       position: relative;
+
+      .img-container {
+        max-width: 600px;
+        margin: 0 auto;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
 
       .header-logo {
         height: 180px;
@@ -48,41 +58,43 @@ $basic-yellow: #e5e599;
       display: flex;
       justify-content: space-between;
       background: linear-gradient(#000000, $basic-red);
-      padding: 60px 5px 5px 0;
+      padding: 40px 10px 10px 0;
 
       .navbar-text {
+        padding-left: 30px;
+        padding-top: 15px;
+
         span {
           font-size: 30px;
           font-weight: bold;
           color: $basic-yellow;
         }
-        padding-left: 30px;
-        padding-top: 15px;
       }
 
       .navbar {
-        height: 60px;
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         row-gap: 10px;
         column-gap: 10px;
+        margin-top: 15px;
 
         .navbar-item {
           min-width: 100px;
-          padding: 17px 30px 13px 30px;
-          background-color: lightgray;
+          max-height: 18px;
+          padding: 8px 10px 6px 10px;
+          background: linear-gradient(gray 0%, lightgray 25%);
           border-radius: 10px;
           border: 2px solid transparent;
           color: #333333;
-          font-size: 20px;
+          font-size: 15px;
           text-align: center;
           cursor: pointer;
           transition: 1s;
 
           &:hover {
-            background-color: gray;
+            background: linear-gradient(gray 0%, lightgray 75%);
             border: 2px solid $basic-yellow;
           }
           &:active {
@@ -90,6 +102,27 @@ $basic-yellow: #e5e599;
             border: 2px solid $basic-yellow;
           }
         }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header-container {
+    .header .navbar-container {
+      flex-direction: column;
+      padding: 40px 10px 10px 10px;
+
+      .navbar-text {
+        text-align: center;
+      }
+
+      .navbar {
+        max-height: 170px;
+      }
+
+      .navbar-item {
+        width: 100%;
       }
     }
   }

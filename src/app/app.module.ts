@@ -4,7 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
-import { YouTubePlayerModule } from '@angular/youtube-player';
+import { HomeModule } from './home/home.module';
+import { BioModule } from './bio/bio.module';
+import { NotFoundModule } from './not-found/not-found.module';
 
 @NgModule({
   declarations: [
@@ -14,9 +16,13 @@ import { YouTubePlayerModule } from '@angular/youtube-player';
     BrowserModule,
     AppRoutingModule,
     SharedModule,
-    YouTubePlayerModule
+    HomeModule,
+    BioModule,
+    NotFoundModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent
+  ]
 })
 export class AppModule { }

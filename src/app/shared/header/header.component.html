@@ -9,7 +9,9 @@
           <img src="assets/images/inst.png">
         </a>
       </div>
-      <img src="assets/images/logo.png" class="header-logo" alt="Band Logo Wide" (click)="playAudio()">
+      <div class="img-container">
+        <img src="assets/images/logo.png" class="header-logo" alt="Band Logo Wide" (click)="playAudio()">
+      </div>
     </div>
 
     <div class="navbar-container">
@@ -19,13 +21,12 @@
         </span>
       </div>
       <div class="navbar">
-        <div class="navbar-item"><b>Bio</b></div>
-        <div class="navbar-item"><b>Discography</b></div>
+        <div class="navbar-item" routerLinkActive="home" [routerLink]="['/home']"><b>Home</b></div>
+        <div class="navbar-item" routerLinkActive="bio" [routerLink]="['/bio']"><b>Bio</b></div>
         <div class="navbar-item"><b>Concerts</b></div>
         <div class="navbar-item"><b>Gallery</b></div>
       </div>
     </div>
-
 
   </div>
 </div>

@@ -1,0 +1,39 @@
+$basic-red: #ff4444;
+$basic-yellow: #e5e599;
+
+.main {
+  z-index: 1;
+  text-align: center;
+  height: 600px;
+  background: linear-gradient(rgba(255,255,255,0), $basic-yellow);
+
+  .title-container {
+    cursor: pointer;
+    width: 100%;
+
+    .title {
+      margin: 0 auto;
+      width: 30%;
+      padding: 10px 20px;
+      color: black;
+      text-align: center;
+      font-weight: bold;
+      font-size: 30px;
+      background: linear-gradient(red 0%, orange 25%, yellow 50%, green 75%, blue 100%);
+      border: 1px solid gray;
+      border-radius: 6px;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  :host ::ng-deep youtube-player {
+    iframe {
+      width: 90%;
+    }
+  }
+}
