@@ -1,11 +1,11 @@
 $basic-red: #ff4444;
-$basic-yellow: #e5e599;
+$basic-yellow: #f0ebde;
 
 .main {
   z-index: 1;
   text-align: center;
   height: 600px;
-  background: linear-gradient(rgba(255,255,255,0), $basic-yellow);
+  background: linear-gradient(rgba(255,255,255,0) 0%, rgba(255,255,255,85%) 25%);
 
   .title-container {
     cursor: pointer;
@@ -19,7 +19,6 @@ $basic-yellow: #e5e599;
       text-align: center;
       font-weight: bold;
       font-size: 30px;
-      background: linear-gradient(red 0%, orange 25%, yellow 50%, green 75%, blue 100%);
       border: 1px solid gray;
       border-radius: 6px;
     }

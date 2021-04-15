@@ -1,0 +1,29 @@
+.parallax {
+  /* Set a specific height */
+  min-height: 300px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.bio-block {
+  min-height: 120px;
+  box-shadow: #333333 0 10px 20px;
+  background-color: #555555;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 15%;
+
+  p, h3 {
+    text-align: center;
+  }
+}
+
+.mh {
+  min-height: 300px;
+}
